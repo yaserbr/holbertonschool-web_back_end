@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Provide an asynchronous function for random delays."""
+"""Run multiple asynchronous coroutines concurrently."""
 
 import asyncio
 import random
@@ -8,7 +8,7 @@ wait_random = __import__("0-basic_async_syntax").wait_random
 
 
 async def wait_n(n, max_delay) -> list:
-    """Wait asynchronously for a random duration and return it."""
+    """Execute random delays concurrently and return their times"""
     tasks = []
     result = []
     while n != 0:
